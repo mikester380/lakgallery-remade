@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CurrContext } from "../context/CurrContext";
 
 const Footer = () => {
@@ -11,19 +12,19 @@ const Footer = () => {
           <p className="footer__heading">About</p>
           <ul className="footer__links">
             <li className="footer__link">
-              <a href="/pieces">Pieces</a>
+              <Link to="/pieces">Pieces</Link>
             </li>
             <li className="footer__link">
-              <a href="/pieces">Designers</a>
+              <Link to="/pieces">Designers</Link>
             </li>
             <li className="footer__link">
-              <a href="/pieces">About</a>
+              <Link to="/pieces">About</Link>
             </li>
             <li className="footer__link">
-              <a href="/pieces">Editorial</a>
+              <Link to="/pieces">Editorial</Link>
             </li>
             <li className="footer__link">
-              <a href="/pieces">Contact</a>
+              <Link to="/pieces">Contact</Link>
             </li>
           </ul>
         </div>
