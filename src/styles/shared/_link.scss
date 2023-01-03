@@ -1,0 +1,25 @@
+%link {
+  text-decoration: none;
+  color: inherit;
+}
+
+%underlined-h-link {
+  @extend %link;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+%stroke-h-link {
+  @extend %link;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: #fff;
+      -webkit-text-stroke: 1.5px #000;
+    }
+  }
+}

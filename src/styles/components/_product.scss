@@ -1,0 +1,32 @@
+.product {
+  @extend %link;
+  display: block;
+
+  &__image {
+    background-color: $color-p-bg;
+    padding: 20px;
+    margin-bottom: 10px;
+    @include ratio(1, 1);
+
+    @include media(">=1025px") {
+      padding: 30px;
+    }
+
+    img {
+      transition: transform 0.3s;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        img {
+          transform: scale(1.04);
+        }
+      }
+    }
+  }
+
+  &__info {
+    line-height: 1;
+    user-select: none;
+  }
+}

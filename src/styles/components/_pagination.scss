@@ -1,0 +1,11 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  &__chevron {
+    display: block;
+    margin-bottom: -7px;
+  }
+}

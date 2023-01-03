@@ -1,0 +1,179 @@
+.home {
+  padding: 50px 10px 0 10px;
+
+  &__section {
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
+    }
+  }
+
+  @include media(">=tablet") {
+    padding: 50px 15px 0 15px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+
+    &-sub {
+      line-height: 1;
+
+      @include media(">=tablet") {
+        font-size: var(--font-200);
+      }
+    }
+
+    &-main {
+      font-size: var(--font-300);
+      font-weight: 400;
+      letter-spacing: -2px;
+
+      @include media(">=desktop") {
+        font-size: var(--font-400);
+      }
+    }
+  }
+
+  &__products {
+    &--grid {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      overflow: scroll;
+      overflow-y: hidden;
+      padding-bottom: 25px;
+      border-bottom: 1px solid $color-gray;
+
+      .product {
+        flex: 1 0 294px;
+
+        @include media(">=tablet") {
+          flex: 1 1 0px;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &--split {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      @include media(">=tablet") {
+        flex-direction: row;
+        gap: 20px;
+
+        .product {
+          flex: 1 1 0px;
+        }
+      }
+    }
+  }
+
+  &__team {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &-member {
+      flex: 1 0 142px;
+
+      &-photo {
+        margin-bottom: 10px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          transition: transform 0.3s;
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              transform: scale(1.04);
+            }
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        .home__team-member-photo {
+          @include ratio(3, 2);
+        }
+      }
+
+      &:nth-child(2) {
+        .home__team-member-photo {
+          @include ratio(7, 9);
+        }
+      }
+
+      &:nth-child(3) {
+        .home__team-member-photo {
+          @include ratio(7, 8);
+        }
+      }
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        .home__team-member-photo {
+          @include ratio(2, 3);
+        }
+      }
+
+      &:nth-child(6) {
+        .home__team-member-photo {
+          @include ratio(71, 95);
+        }
+      }
+
+      &:nth-child(7) {
+        .home__team-member-photo {
+          @include ratio(1, 1);
+        }
+      }
+
+      &-name {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 100px;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__gallery-link {
+    @extend %link;
+    display: block;
+    flex-basis: 142px;
+    flex-shrink: 0;
+
+    background: $color-p-bg;
+
+    @include media(">=645px") {
+      flex-basis: 0px;
+      flex-shrink: 1;
+      flex-grow: 1;
+    }
+  }
+
+  &__gallery-image {
+    @include ratio(1, 1);
+  }
+}

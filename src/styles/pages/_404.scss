@@ -1,0 +1,43 @@
+.error {
+  padding: 20px 10px 0 10px;
+
+  @include media(">=tablet") {
+    padding: 60px 20px 0 20px;
+  }
+
+  &__top {
+    border-bottom: 1px solid $color-gray;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: var(--font-300);
+    margin-bottom: 30px;
+
+    @include media(">=tablet") {
+      margin-bottom: 60px;
+    }
+
+    @include media(">=1025px") {
+      font-size: var(--font-400);
+    }
+  }
+
+  &__bottom {
+    padding-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+
+    @include media(">=tablet") {
+      margin-bottom: 80px;
+    }
+
+    &-left {
+      flex-basis: 39.99%;
+    }
+
+    &-right {
+      flex-basis: 60.01%;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.contact {
+  padding: 25px 10px 0 10px;
+  margin-bottom: 50px;
+
+  @include media(">=tablet") {
+    padding: 60px 20px 0 20px;
+    margin-bottom: 100px;
+  }
+
+  &__grid {
+    @include media(">=tablet") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0px 50px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: var(--font-300);
+    letter-spacing: -3px;
+    margin-bottom: 80px;
+
+    @include media(">=tablet") {
+      margin-bottom: 0;
+    }
+
+    @include media(">=1025px") {
+      font-size: var(--font-400);
+    }
+  }
+
+  &__form {
+    @include media(">=tablet") {
+      max-width: 315px;
+    }
+
+    @include media(">=1025px") {
+      max-width: 450px;
+    }
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid $color-gray;
+    margin-bottom: 20px;
+    line-height: 1;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    &:not(textarea) {
+      padding-bottom: 15px;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  &__submit {
+    @extend %button-default;
+    margin-bottom: 40px;
+
+    @include media(">=tablet") {
+      margin-bottom: 0;
+    }
+  }
+
+  &__line {
+    height: 1px;
+    background: $color-gray;
+    grid-column: 1 / -1;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    @include media(">=tablet") {
+      margin-top: 70px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__about {
+    margin-bottom: 40px;
+
+    @include media(">=tablet") {
+      grid-row: 3 / 4;
+      grid-column: 1 / -1;
+      margin-bottom: 0;
+    }
+
+    @include media(">=1025px") {
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+    }
+
+    p {
+      line-height: 1;
+      @include media(">=tablet") {
+        max-width: 480px;
+      }
+
+      @include media(">=1025px") {
+        max-width: 570px;
+      }
+    }
+  }
+
+  &__contacts {
+    @include media(">=tablet") {
+      grid-row: 4 / 5;
+      grid-column: 1 / 2;
+    }
+
+    @include media(">=1025px") {
+      grid-row: 3 / 4;
+      grid-column: 2 / 3;
+    }
+  }
+
+  &__contacts-list {
+    list-style-type: none;
+  }
+
+  &__contact {
+    a {
+      @extend %link;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
+
+    &--social {
+      @extend %underlined-h-link;
+    }
+  }
+}

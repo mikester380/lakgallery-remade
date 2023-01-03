@@ -1,0 +1,72 @@
+.header {
+  --header-font: var(--font-100);
+  --header-top-height: 55px;
+
+  @include media(">=tablet") {
+    --header-font: var(--font-200);
+    --header-top-height: 76px;
+  }
+
+  //prevents the header from scrolling so the "header__top" element won't scroll out of view when the menu is open
+  &--fixed {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__top {
+    height: var(--header-top-height);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 0px 10px;
+    border: 1px solid $color-gray;
+  }
+
+  &__home {
+    @extend %link;
+  }
+
+  &__title {
+    font-size: var(--header-font);
+    font-weight: 400;
+  }
+
+  &__menu,
+  &__cart {
+    @extend %button-default;
+    font-size: var(--header-font);
+  }
+
+  &__home,
+  &__menu,
+  &__cart {
+    white-space: nowrap;
+
+    flex-basis: 0px;
+    flex-grow: 1;
+  }
+
+  &__menu {
+    text-align: center;
+    span .arrow {
+      transform: scale(0.5, 0.9);
+      transition: transform 0.5s;
+
+      @include media(">=tablet") {
+        transform: scale(1);
+      }
+
+      &--active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__cart {
+    text-align: right;
+  }
+}

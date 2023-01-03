@@ -1,0 +1,133 @@
+.footer {
+  padding: 20px;
+  padding-top: 40px;
+  border-top: 1px solid $color-gray;
+
+  display: grid;
+  grid-template-columns: 449px 447px;
+  grid-template-areas:
+    "left right"
+    "bottom bottom";
+  justify-content: space-between;
+  row-gap: 150px;
+
+  @include media("<=1025px") {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "right"
+      "bottom";
+    row-gap: 80px;
+  }
+
+  @include media("<=tablet") {
+    row-gap: 50px;
+    padding: 10px;
+    padding-top: 40px;
+  }
+
+  &__left {
+    grid-area: left;
+    display: flex;
+    // justify-content: space-between;
+    gap: 130px;
+
+    @include media("<=tablet") {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  &__right {
+    grid-area: right;
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__bottom {
+    grid-area: bottom;
+  }
+
+  &__heading {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  &__links {
+    list-style: none;
+  }
+
+  &__link {
+    a {
+      display: block;
+      @extend %link;
+    }
+  }
+
+  &__contact {
+    .footer__link:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__email {
+    border: none;
+    outline: 0;
+    border-bottom: 2px solid $color-gray;
+    padding-bottom: 20px;
+    font-family: inherit;
+    font-size: inherit;
+
+    &::placeholder {
+      color: inherit;
+    }
+
+    @include media("<=1025px") {
+      width: 313px;
+    }
+
+    @include media("<=tablet") {
+      width: auto;
+    }
+  }
+
+  &__currency {
+    border: none;
+    outline: 0;
+    font-family: inherit;
+    font-size: inherit;
+
+    margin-bottom: 50px;
+  }
+
+  &__legals {
+    display: flex;
+    gap: 40px 80px;
+    flex-wrap: wrap;
+
+    @include media("<tablet") {
+      flex-direction: column;
+      gap: 40px 0;
+    }
+  }
+
+  &__legal {
+    font-size: 13px;
+    white-space: nowrap;
+
+    &:last-child {
+      margin-left: auto;
+
+      @include media("<=tablet") {
+        margin-left: revert;
+      }
+    }
+
+    &-link {
+      @extend %link;
+    }
+  }
+}

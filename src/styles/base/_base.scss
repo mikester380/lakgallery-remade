@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  --font-100: 1.19rem;
+  --font-200: 1.83rem;
+  --font-300: 2rem;
+  --font-400: 2.94rem;
+  --font-500: 9.63rem;
+
+  font-family: "NeuehaasGrotesk", $system-font;
+  font-size: var(--font-100);
+
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.457);
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+
+  &--active {
+    opacity: 1;
+    pointer-events: revert;
+  }
+}

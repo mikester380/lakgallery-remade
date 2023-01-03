@@ -1,0 +1,51 @@
+.nav {
+  width: 100%;
+  height: calc(100% - var(--header-top-height) - 1px);
+  position: fixed;
+  z-index: 5;
+  top: calc(var(--header-top-height) + 1px);
+  padding: 30px 0 0 10px;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+
+  //prevents screen readers from reading the navigation when it's not active.
+  visibility: hidden;
+
+  overflow-y: auto;
+
+  //prevents scroll chaining
+  overscroll-behavior: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include media(">=tablet") {
+    padding-top: 0;
+  }
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: revert;
+  }
+
+  &__links {
+    list-style: none;
+  }
+
+  &__link {
+    @extend %stroke-h-link;
+    font-size: var(--font-400);
+    letter-spacing: -2px;
+    line-height: 1;
+    transition: color 0.3s;
+
+    @include media(">=tablet") {
+      font-size: var(--font-500);
+    }
+  }
+}
