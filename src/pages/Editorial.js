@@ -1,11 +1,12 @@
 import React from "react";
+import Layout from "../components/Layout";
 import Pagination from "../components/Pagination";
 import Story from "../components/Story";
 import { stories } from "../data/data";
 
 const Editorial = () => {
   return (
-    <main className="main">
+    <Layout>
       <div className="editorial">
         <div className="editorial__title">
           <span className="editorial__title-sub">(A)</span>
@@ -20,7 +21,7 @@ const Editorial = () => {
           <Pagination current={1} total={1} />
         </div>
       </div>
-    </main>
+    </Layout>
   );
 };
 

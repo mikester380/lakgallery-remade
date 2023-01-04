@@ -1,4 +1,5 @@
 import React from "react";
+import Layout from "../components/Layout";
 import Product from "../components/Product";
 import TeamMember from "../components/TeamMember";
 import GalleryImage from "../components/GalleryImage";
@@ -6,7 +7,7 @@ import { products, team, instagram } from "../data/data";
 
 const Hompage = function () {
   return (
-    <main className="main">
+    <Layout>
       <div className="home">
         <section className="home__section">
           <div className="home__title">
@@ -94,7 +95,7 @@ const Hompage = function () {
           </div>
         </section>
       </div>
-    </main>
+    </Layout>
   );
 };
 

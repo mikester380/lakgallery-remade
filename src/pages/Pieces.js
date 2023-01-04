@@ -3,10 +3,11 @@ import Product from "../components/Product";
 import FilterSection from "../components/FilterSection";
 import Pagination from "../components/Pagination";
 import { products, piecesFilters } from "../data/data";
+import Layout from "../components/Layout";
 
 const Pieces = () => {
   return (
-    <main className="main">
+    <Layout>
       <div className="pieces">
         <h2 className="pieces__heading">All Pieces</h2>
         <section className="pieces__grid">
@@ -48,7 +49,7 @@ const Pieces = () => {
           </div>
         </section>
       </div>
-    </main>
+    </Layout>
   );
 };
 

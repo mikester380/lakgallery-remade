@@ -2,18 +2,15 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Layer from "./Layer";
-import { Outlet } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
 import "../styles/main.scss";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <div className="wrapper">
       <Header />
-      <main className="main">
-        <Outlet />
-      </main>
+      <main className="main">{children}</main>
       <Footer />
       <Layer />
       <ScrollToTop />
