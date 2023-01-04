@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../components/Layout";
 
 const Contact = () => {
   const setTextAreaHeight = (e) => {
@@ -16,7 +15,7 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    <main className="main">
       <div className="contact">
         <div className="contact__grid">
           <h2 className="contact__title">Get in touch</h2>
@@ -79,7 +78,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </main>
   );
 };
 

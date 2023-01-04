@@ -1,12 +1,11 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { about } from "../data/data";
 
 const About = () => {
   const { title, body } = about;
   const bodyParagraphs = body.split("\n");
   return (
-    <Layout>
+    <main className="main">
       <div className="about">
         <div className="about__title">
           <span className="about__title-sub">(A)</span>
@@ -29,7 +28,7 @@ const About = () => {
           </li>
         </ul>
       </div>
-    </Layout>
+    </main>
   );
 };
 

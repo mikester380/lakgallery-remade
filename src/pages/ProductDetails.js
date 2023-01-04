@@ -6,7 +6,6 @@ import { CartContext } from "../context/CartContext";
 import { LayerContext } from "../context/LayerContext";
 import Product from "../components/Product";
 import { products } from "../data/data";
-import Layout from "../components/Layout";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -49,7 +48,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <Layout>
+    <main className="main">
       <div className="details">
         <div className="details__details">
           <div className="details__details-top">
@@ -163,7 +162,7 @@ const ProductDetails = () => {
           ))}
         </div>
       </div>
-    </Layout>
+    </main>
   );
 };
 

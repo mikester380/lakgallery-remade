@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DesignersSection from "../components/DesignersSection";
-import Layout from "../components/Layout";
 import { designers } from "../data/data";
 import { preloadImage } from "../utils/helpers";
 
@@ -23,7 +22,7 @@ const Designers = () => {
   };
 
   return (
-    <Layout>
+    <main className="main">
       <div className="designers" id="designers">
         <div className="designers__all-names">
           {sectionLetters.map((letter, index) => (
@@ -43,7 +42,7 @@ const Designers = () => {
           />
         </div>
       </div>
-    </Layout>
+    </main>
   );
 };
 
