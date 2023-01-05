@@ -15,16 +15,16 @@ const Footer = () => {
               <Link to="/pieces">Pieces</Link>
             </li>
             <li className="footer__link">
-              <Link to="/pieces">Designers</Link>
+              <Link to="/designers">Designers</Link>
             </li>
             <li className="footer__link">
-              <Link to="/pieces">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li className="footer__link">
-              <Link to="/pieces">Editorial</Link>
+              <Link to="/editorial">Editorial</Link>
             </li>
             <li className="footer__link">
-              <Link to="/pieces">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -65,7 +65,6 @@ const Footer = () => {
         >
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
-          <option value="AUD">AUD</option>
           <option value="CAD">CAD</option>
           <option value="GBP">GBP</option>
         </select>
