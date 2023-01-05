@@ -22,27 +22,25 @@ const Designers = () => {
   };
 
   return (
-    <main className="main">
-      <div className="designers" id="designers">
-        <div className="designers__all-names">
-          {sectionLetters.map((letter, index) => (
-            <DesignersSection
-              letter={letter}
-              key={index}
-              showImage={showImage}
-              hideImage={hideImage}
-            />
-          ))}
-        </div>
-        <div className="designers__images">
-          <img
-            src={image.length ? image[0] : ""}
-            alt={image.length ? image[1] : ""}
-            data-visible={image.length ? "true" : "false"}
+    <div className="designers" id="designers">
+      <div className="designers__all-names">
+        {sectionLetters.map((letter, index) => (
+          <DesignersSection
+            letter={letter}
+            key={index}
+            showImage={showImage}
+            hideImage={hideImage}
           />
-        </div>
+        ))}
       </div>
-    </main>
+      <div className="designers__images">
+        <img
+          src={image.length ? image[0] : ""}
+          alt={image.length ? image[1] : ""}
+          data-visible={image.length ? "true" : "false"}
+        />
+      </div>
+    </div>
   );
 };
 

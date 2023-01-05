@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import { formatPrice } from "../utils/helpers";
 import { CurrContext } from "../context/CurrContext";
@@ -48,7 +48,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <main className="main">
+    <Fragment>
       <div className="details">
         <div className="details__details">
           <div className="details__details-top">
@@ -162,7 +162,7 @@ const ProductDetails = () => {
           ))}
         </div>
       </div>
-    </main>
+    </Fragment>
   );
 };
 
