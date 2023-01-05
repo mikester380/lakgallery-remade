@@ -5,8 +5,8 @@
   "author": "mikestaarr",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "lint": "eslint \"src/**/*.{js, jsx}\"",
     "format": ""
   },
